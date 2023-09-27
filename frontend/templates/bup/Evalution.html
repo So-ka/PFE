@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={% static "css/Evaluation.css"%}>
+    <title>Evaluation</title>
+  </head>
+  <Header>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    RECOMMAND-Me
+  </Header>
+  <body>
+    <fieldset id="input">
+      <legend>Dataset Input</legend>
+      <label for="file">Dataset en csv:</label>
+      <input type="file" name="file" value="Dataset.csv"><br>
+      <input type="submit" name="up" value="Upload">
+    </fieldset><br>
+    <fieldset id="train">
+      <legend>Train Phase</legend>
+      <label for="default">Use Defaults :</label>
+      <input type="checkbox" name="default" value="on">
+      <table>
+      <tr>
+        <td><label for='opt'>Optimizers :</label></td>
+        <td><select class="" name="opt">
+          <option value="Adam">Adam</option>
+          <option value="SGD">SGD</option>
+          <option value="RMSprop">RMSprop</option>
+          <option value="Adadelta">Adadelta</option>
+          <option value="Adagrad">Adagrad</option>
+          <option value="Adamax">Adamax</option>
+          <option value="Nadam">Nadam</option>
+        </select></td>
+      </tr>
+      <tr>
+      <td><label for="lr">Learning Rate :</label></td>
+      <td><input type="text" name="lr"></td>
+      </tr>
+      <tr>
+      <td><label for="epochs">Epochs :</label></td>
+      <td><input type="text" name="epochs"></td>
+      </tr>
+      <tr>
+        <td><label for="embd_">Embedding Size :</label></td>
+        <td><input type="text" name="embd_"></td>
+      </tr>
+      </table>
+      <input type="submit" value="Train">
+    </fieldset><br>
+    <fieldset id="test">
+      <legend>Test Results</legend>
+        <table class="res_table">
+          <th>Metrics</th><th>Valeur</th>
+        <tr>
+          <td>MSE</td><td><img src={% static "files/loading.gif"%} class="loading"/></td>
+        </tr>
+        <tr>
+          <td>MAE</td><td><img src={% static "files/loading.gif"%} class="loading"/></td>
+        </tr>
+        <tr>
+          <td>RMSE</td><td><img src={% static "files/loading.gif"%} class="loading"/></td>
+        </tr>
+        <tr>
+          <td>Accuracy</td><td><img src={% static "files/loading.gif"%} class="loading"/></td>
+        </tr>
+        </table>
+    </fieldset>
+
+  </body>
+</html>

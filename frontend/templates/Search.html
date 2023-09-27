@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- c'est le code qui sert à structurer page de recherche et son contenu. il contiendra différentes balises pour structurer notre page sous la bonne forme-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/Search.css' %}">
+    <title>Home</title>
+</head>
+<Header>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> RECOMMAND-Me
+</Header>
+
+<body>
+
+
+    <!--cet aprt concerne les éléments sur le côté de la page -->
+    <div id="side">
+        <a href="/Home">
+        <div id="logo" onclick=recommand()>
+            <div id="image_holder">
+                <div id="sub_image_holder">
+                    <img src={% static "files\camera.png" %} id="image">
+                </div>
+            </div>
+        </div>
+        </a>
+        <!-- cette partie couvre les différentes cotes que les films ont-->
+        <a id="ratings_l">Manage Ratings</a>
+        
+    </div>
+
+    <!-- cette partie relie les différentes catégories dans lesquelles l'utilisateur peut effectuer une recherche-->
+    <div id="container">
+
+        <div id="selection">
+            <form method="post">
+                <span id='sel_label'>Search By Name:</span><input type="text" placeholder="Movie Title" name="Search" id="Search"><input type="submit" value="Search" id="Search_b" onclick="searchBytitle()">
+            </form>
+
+            <hr>
+            <div id="genres">
+                <form method="get" id="my_form">
+                   <input class="b_g" type="submit" value="Action" name="Category" onclick="searchByCategory()">
+                    <input class="b_g" type="submit"value="Adventure" name="Category" onclick="searchByCategory()">
+                    <input class="b_g" type="submit" value="Animation" name="Category" onclick="searchByCategory()">
+                    <input class="b_g" type="submit" value="Comedy" name="Category" onclick="searchByCategory()">
+                    <input class="b_g" type="submit"  value="Crime" name="Category" onclick="searchByCategory()">
+                    <input class="b_g" type="submit"  value="Documentary" name="Category" onclick="searchByCategory()">
+                    <input class="b_g" type="submit"  value="Drama" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit"  value="Family" name="Category" onclick="searchByCategory()">
+                    <input  class="b_g" type="submit"  value="Fantasy" name="Category" onclick="searchByCategory()">
+                    <input  class="b_g" type="submit"  value="Foreign" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit"  value="History" name="Category" onclick="searchByCategory()">
+                    <input  class="b_g" type="submit"  value="Horror" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit"  value="Music" name="Category" onclick="searchByCategory()">
+                    <input  class="b_g" type="submit"  value="Mystery" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit"  value="Romance" name="Category" onclick="searchByCategory()">
+                    <input  class="b_g" type="submit"  value="Science Fiction" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit"  value="TV Movie" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit"  value="Thriller" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit"  value="War" name="Category" onclick="searchByCategory()">
+                    <input class="b_g"  type="submit" value="Western" name="Category" onclick="searchByCategory()">
+                </form>
+            </div>
+        </div>
+        <!--cette partie concerne les résultats de la recherche -->
+        <div id="Results_Search">
+            <h1 id="sect3">Search Results</h1>
+            {% for movie in Data %}
+            <div class="article"><img src={{ movie.poster_path }} class="Poster">
+                <div class="avg_r">{{ movie.vote_average }}</div>
+                <div class="rate_me" onclick="rate({{ movie.id }},this)">Rate Me</div>
+            </div>
+            {% endfor %}
+        </div>
+        <script src={% static ".\files\home.js" %}></script>
+</body>
+
+</html>

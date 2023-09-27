@@ -1,0 +1,276 @@
+/*nous avons utilisé ce fichier CSS pour décrire la présentation de la page Web d'index, y compris les couleurs, la mise en page et
+ les polices. Il permet également d'adapter 
+ la présentation à différents types d'appareils, tels que les grands écrans,
+  les petits écrans ou les imprimantes. */
+
+
+/* c'est un sélecteur html qui manipule les propriétés de <HTML> La balise <html> représente la racine d'un document HTML. */
+
+html {
+    background-color: black;
+    font-family: Poppins;
+    height: 100%;
+}
+
+
+/*La balise <body> définit le corps du document. L'élément <body> contient 
+tout le contenu d'un document HTML, tel que les titres, les paragraphes,
+ les images, les hyperliens, les tableaux, la liste. Nous avons utilisé
+  ce sélecteur pour styliser les balises body en HTML */
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+/* L'élément <header> représente un conteneur pour le contenu d'introduction 
+ou un ensemble de liens de navigation. Nous avons utilisé ce sélecteur pour styliser*/
+
+header {
+    box-sizing: border-box;
+    height: 5%;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 4px;
+    font-family: 'Poppins';
+    background-color: #0F0074;
+}
+
+#Introduction {
+    z-index: 2;
+    font-family: Poppins;
+    box-sizing: border-box;
+    margin: 0;
+    background-image: url(../files/intro.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 400%;
+    background-position: 0% 50%;
+    background: #111111;
+    padding-top: 10px;
+    width: 100%;
+    height: 18%;
+}
+
+.particles-js-canvas-el {
+    position: fixed;
+    width: 100px;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    margin-left: 26px;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+h2 {
+    display: inline-block;
+    clear: left;
+    color: #FFFFFF;
+    margin-top: 42px;
+    margin-left: 100px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#MR {
+    color: #FF004E;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#sub_intro {
+    font-style: italic;
+    margin-top: 60px;
+    margin-left: 100px;
+    font-weight: 50;
+}
+
+#Problem {
+    font-weight: 600;
+    color: #FFFF00;
+}
+
+p {
+    display: inline-block;
+    margin: 0;
+    color: white;
+    font-family: Poppins;
+    margin-left: 36px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#action {
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 77%;
+    background: rgb(192, 177, 240);
+    background: linear-gradient(90deg, rgba(192, 177, 240, 1) 0%, rgba(225, 255, 250, 1) 100%);
+    overflow: hidden;
+}
+
+.article {
+    display: inline-block;
+    border-radius: 10px;
+    height: 230px;
+    width: 150px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.Poster {
+    width: 100%;
+    height: 100%;
+}
+
+.on {
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    position: fixed;
+    top: 23%;
+    width: 100%;
+    height: 77%;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: inset 0px 0px 100px 0px rgba(0, 76, 255, 0.45);
+}
+
+#form_div {
+    align-items: center;
+    width: 30%;
+    height: 70%;
+    margin-right: 70px;
+    margin-top: 150px;
+    float: right;
+}
+
+table {
+    border-radius: 10px;
+    color: white;
+    font-weight: 200;
+    text-shadow: 2px 2px #ff0000;
+    text-align: right;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px dashed black;
+    border-spacing: 1em;
+}
+
+#image_holder {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background: white;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+#sub_image_holder {
+    background: rgb(0, 248, 239);
+    background: linear-gradient(180deg, rgba(0, 248, 239, 1) 0%, rgba(0, 124, 120, 1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border-radius: 50%;
+    border: 10px solid #707070;
+    width: 90px;
+    height: 90px;
+}
+
+#image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    font-weight: 200;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: rgb(0, 200, 0);
+    margin-top: 20px;
+    width: 30%;
+    margin-left: 35%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+    color: white;
+    background-color: rgb(0, 230, 0);
+    margin-top: 20px;
+    width: 30%;
+    margin-left: 35%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+input[type="submit"]:active {
+    color: white;
+    background-color: rgb(0, 255, 0);
+    margin-top: 20px;
+    width: 30%;
+    margin-left: 35%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+#AOR {
+    border-radius: 0;
+    margin-left: 80px;
+    font-size: 19px;
+    border: none;
+    background-color: #00D6AB;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: fixed;
+    bottom: 0px;
+    width: 300px;
+    height: 50px;
+    font-weight: 700;
+    box-shadow: 0px -4px 67px 0px rgb(0, 255, 111, 1);
+}
+
+#login {
+    position: absolute;
+    right: 0;
+    width: 90px;
+    border-radius: 10px;
+    background: #7588FF;
+    color: white;
+    font-size: 15px;
+    border: none;
+}

@@ -1,0 +1,76 @@
+{% load static %}
+<!-- c'est le code qui sert à structurer la page web d'évaluation et son contenu. il contiendra différentes balises pour structurer notre page sous la bonne forme-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={% static "css/Evaluation.css"%}>
+    <title>Evaluation</title>
+</head>
+<Header>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> RECOMMAND-Me
+</Header>
+
+<body>
+    <form method="post">
+    <!-- cette balise concerne l'élément d'entrée de la page. -->
+    <!-- cette balise concerne la partie "train" de la page qui offre aux utilisateurs
+       le choix de sélectionner différents optimiseurs et différents paramètres-->
+    <fieldset id="train">
+        <legend>Train Phase</legend>
+        <label for="default">Use Pre-Trained Model :</label>
+        <input type="checkbox" name="default" value="on">
+        <table>
+            <tr>
+                <td><label for='opt'>Optimizers :</label></td>
+                <td><select class="" name="opt">
+          <option value="Adam">Adam</option>
+          <option value="SGD">SGD</option>
+          <option value="RMSprop">RMSprop</option>
+          <option value="Adadelta">Adadelta</option>
+          <option value="Adagrad">Adagrad</option>
+          <option value="Adamax">Adamax</option>
+          <option value="Nadam">Nadam</option>
+        </select></td>
+            </tr>
+            <tr>
+                <td><label for="lr">Learning Rate :</label></td>
+                <td><input type="text" name="lr"></td>
+            </tr>
+            <tr>
+                <td><label for="epochs">Epochs :</label></td>
+                <td><input type="text" name="epochs"></td>
+            </tr>
+            <tr>
+                <td><label for="embd_" >Embedding Size :</label></td>
+                <td><input type="text" name="embd_"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Train">
+    </fieldset><br>
+    </form>
+    <!-- cette balise concerne la partie "test" de la page qui montre à l'utilisateur les résultats en MSE , MEA , RMSE et la précision du système choisi-->
+    <fieldset id="test">
+        <legend>Test Results</legend>
+        <table class="res_table">
+            <th>Metrics</th>
+            <th>Valeur</th>
+            <tr>
+                <td>MSE</td>
+                <td><img src={% static "files/loading.gif"%} class="loading" />{{Data.mae}}</td>
+            </tr>
+            <tr>
+                <td>MAE</td>
+                <td><img src={% static "files/loading.gif"%} class="loading" />{{Data.mse}}</td>
+            </tr>
+            <tr>
+                <td>RMSE</td>
+                <td><img src={% static "files/loading.gif"%} class="loading" />{{Data.rmse}}</td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+    <title>Home</title>
+  </head>
+  <Header>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    RECOMMAND-Me
+  </Header>
+  <body>
+
+    
+
+    <div id="side">
+      <div id="logo" onclick=recommand()>
+        <div id="image_holder">
+        <div id="sub_image_holder">
+      <img src={% static "files\camera.png" %} id="image">
+    </div>
+    </div>
+          </div>
+          <a id="ratings_l" href="/Home/Rating_List">Manage Ratings</a>
+      <div id="recommandations">
+          Recommandations
+          <div class="article_r"><img src={% static "files\posters\4.jpg" %} class="Poster"><div class="avg_r">7.6</div></div>
+          <div class="article_r"><img src={% static "files\posters\4.jpg" %} class="Poster"><div class="avg_r">7.6</div></div>
+          <div class="article_r"><img src={% static "files\posters\4.jpg" %} class="Poster"><div class="avg_r">7.6</div></div>
+          <div class="article_r"><img src={% static "files\posters\4.jpg" %} class="Poster"><div class="avg_r">7.6</div></div>
+          <div class="article_r"><img src={% static "files\posters\4.jpg" %} class="Poster"><div class="avg_r">7.6</div></div>
+      </div>
+  </div>
+          
+
+    <div id="container">
+      <img src={% static "files\trends.png" %} class="trimage"><h1 class="sect">Trending (Top #10)</h1>
+      <div id="trending">
+        {% for movie in Data %}
+        <div class="article"><img src={{ movie.poster_path }} class="Poster"><div class="avg_r">{{ movie.vote_average }}</div><div class="rate_me" onclick="rate({{ movie.id }},this)">Rate Me</div></div>
+        {% endfor %}
+      </div>
+      <div id="selection">
+        <form method="post">
+          <span id='sel_label'>Search By Name:</span><input type="text" placeholder="Movie Title" name="Search" id="Search"><input type="submit" value="Search" id="Search_b" onclick="searchBytitle()">
+        </form>
+        
+        <hr>
+        <div id="genres">
+        <div class="genre">Action</div>
+        <div class="genre">Adventure</div>
+        <div class="genre">Animation</div>
+        <div class="genre">Comedy</div>
+        <div class="genre">Crime</div>
+        <div class="genre">Documentary</div>
+        <div class="genre">Drama</div>
+        <div class="genre">Family</div>
+        <div class="genre">Fantasy</div>
+        <div class="genre">Foreign</div>
+        <div class="genre">History</div>
+        <div class="genre">Horror</div>
+        <div class="genre">Music</div>
+        <div class="genre">Mystery</div>
+        <div class="genre">Romance</div>
+        <div class="genre">Science Fiction</div>
+        <div class="genre">TV Movie</div>
+        <div class="genre">Thriller</div>
+        <div class="genre">War</div>
+        <div class="genre">Western</div> 
+      </div>
+    </div>
+    <img src={% static "files\trends.png" %} class="trimage"><h1 class="sect">Best Sellers (Top #25)</h1>
+    <div id="Best_S">
+      {% for movie in Sells %}
+      <div class="article"><img src={{ movie.poster_path }} class="Poster"><div class="avg_r">{{ movie.vote_average }}</div><div class="rate_me" onclick="rate({{ movie.id }},this)">Rate Me</div></div>
+      {% endfor %}
+    </div>
+    <div id="Results_Search">
+      <h1 id="sect3">Search Results</h1>
+    </div>
+    <script  src={% static ".\files\home.js" %} ></script>
+  </body>
+</html>

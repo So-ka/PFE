@@ -1,0 +1,92 @@
+/*nous avons utilisé ce fichier CSS pour décrire la présentation de la page Web d'Evaluation, y compris les couleurs, la mise en page et
+ les polices. Il permet également d'adapter 
+ la présentation à différents types d'appareils, tels que les grands écrans,
+  les petits écrans ou les imprimantes. */
+
+
+/* c'est un sélecteur html qui manipule les propriétés de <HTML> La balise <html> représente la racine d'un document HTML. */
+
+html {
+    background-color: #E6E6E6;
+    font-family: Poppins;
+    height: 100%;
+}
+
+
+/*La balise <body> définit le corps du document. L'élément <body> contient 
+tout le contenu d'un document HTML, tel que les titres, les paragraphes,
+ les images, les hyperliens, les tableaux, la liste. Nous avons utilisé
+  ce sélecteur pour styliser les balises body en HTML */
+
+body {
+    text-align: center;
+    margin: 0;
+    height: 100%;
+}
+
+
+/* L'élément <header> représente un conteneur pour le contenu d'introduction 
+ou un ensemble de liens de navigation. Nous avons utilisé ce sélecteur pour styliser*/
+
+header {
+    box-sizing: border-box;
+    height: 5%;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 4px;
+    font-family: 'Poppins';
+    background-color: #0F0074;
+}
+
+
+/*Le début du sélecteur par un point signifie le nom de la classe. nous manipulons ici les attributs de la classe res_table
+le tableau manipulé ici est le tableau des résultats. */
+
+.res_table {
+    border-collapse: collapse;
+}
+
+
+/*Le début du sélecteur par un point signifie le nom de la classe. nous manipulons ici les attributs de la classe res_table.
+le tableau manipulé ici est le tableau des résultats.
+La balise th définit une cellule d'en-tête dans un tableau HTML.
+Chaque cellule du tableau est définie par un td.
+ */
+
+.res_table td,
+.res_table th {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+/*Le hashtag '#' est un sélecteur d'identifiant utilisé pour cibler un seul élément spécifique avec un identifiant unique, l'identifiant ici est input. */
+
+#input {
+    display: inline-block;
+}
+
+
+/*Le hashtag '#' est un sélecteur d'identifiant utilisé pour cibler un seul élément spécifique avec un identifiant unique, l'identifiant ici est train. */
+
+#train {
+    display: inline-block;
+}
+
+
+/*Le hashtag '#' est un sélecteur d'identifiant utilisé pour cibler un seul élément spécifique avec un identifiant unique, l'identifiant ici est test. */
+
+#test {
+    display: inline-block;
+}
+
+
+/*Le hashtag '#' est un sélecteur d'identifiant utilisé pour cibler un seul élément spécifique avec un identifiant unique, l'identifiant ici est loading. */
+
+.loading {
+    width: 25px;
+    height: 25px;
+    float: right;
+    padding-left: 10px;
+}

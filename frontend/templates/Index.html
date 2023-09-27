@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- c'est le code qui sert à structurer la page web  sommaire et son contenu. il contiendra différentes balises pour structurer notre page sous la bonne forme-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={% static "css\index.css" %}>
+    <title>Home</title>
+</head>
+
+<body>
+
+
+
+    <Header>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> RECOMMAND-Me
+
+        <!--cela concerne l'affiche d'introduction sur la page -->
+    </Header>
+    <div id="Introduction">
+        <script src={% static ".\files\particles.min.js" %}></script>
+        <script src={% static ".\files\script.js" %}></script>
+        <h1>Get Related To Millions Of Movies Out There !</h1>
+        <p>recommend me is a platform where you can<br>solve the <span id="Problem">'what to see next'</span> probleme !</p>
+
+
+    </div>
+    <!-- cela concerne les différentes affiches de fond-->
+    <div id="action">
+        <div class="article"><img src={% static "files\posters\1.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\4.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\2.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\3.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\5.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\6.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\7.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\8.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\9.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\10.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\11.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\12.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\13.jpg" %} class="Poster"></div>
+        <div class="article"><img src={% static "files\posters\14.jpg" %} class="Poster"></div>
+    </div>
+    <div class="on">
+        <div id="form_div">
+            <div id="image_holder">
+                <div id="sub_image_holder">
+                    <a href="/Home/"><img src={% static "files\camera.png" %} id="image"></a>
+                </div>
+            </div>
+        </div>
+        <!-- cela concerne la description du site web-->
+        <H2>Set Your Personalized
+            <BR>
+            <span id="MR">Movie Recommander</span>
+            <BR> And Start Searching !</H2><br>
+        <p id="sub_intro">Uses Modern <span style="color:#00B7B0;">Artificial Intelligence</span> Techniques<br>and with a dataset of over 100k movie.</p>
+        <a href="/Home/Evaluation/"><input type="button" value="Analyze Our Recommander" id="AOR"></a>
+    </div>
+
+</body>
+
+</html>

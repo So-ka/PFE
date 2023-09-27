@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/ratings.css' %}">
+    <title>Home</title>
+  </head>
+  <Header>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    RECOMMAND-Me
+  </Header>
+  <body>
+    <a class="trimage_link" href="/Home/"></a><h1 class="sect">Your Movie Reviews : </h1>
+    <div id="container_new">
+    {% for movie in Data %}
+      <div class="article"><img src={{ movie.poster_path }} class="Poster"><div class="avg_r">{{ movie.ratings }}</div><div class="rate_me" onclick="rate({{ movie.movie_id }},this)">Delete</div></div>
+      {% endfor %}
+    </div>
+    <script  src={% static ".\files\home.js" %} ></script>
+  </body>
+</html>

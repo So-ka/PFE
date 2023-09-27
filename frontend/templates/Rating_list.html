@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- c'est le code qui sert à structurer la page des évaluations des utilisateurs et son contenu. il contiendra différentes balises pour structurer notre page sous la bonne forme-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/ratings.css' %}">
+    <title>Home</title>
+</head>
+<Header>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> RECOMMAND-Me
+</Header>
+
+<body>
+    <!--cette partie affiche les différents films que l'utilisateur a noté -->
+    <a class="trimage_link" href="/Home/"></a>
+    <h1 class="sect">Your Movie Reviews : </h1>
+    <div id="container_new">
+        {% for movie in Data %}
+        <div class="article"><img src={{ movie.poster_path }} class="Poster">
+            <div class="avg_r">{{ movie.ratings }}</div>
+            <form method="post"><input type="text" style="display:none" value={{ movie.id }} name="id"><input class="rate_me" type="submit" value="Delete"></form>
+        </div>
+        {% endfor %}
+    </div>
+    <script src={% static ".\files\home.js" %}></script>
+</body>
+
+</html>

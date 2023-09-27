@@ -1,0 +1,42 @@
+html{
+  background-color: #E6E6E6;
+  font-family: Poppins;
+  height: 100%;
+}
+body{
+  text-align: center;
+  margin:0;
+  height:100%;
+}
+header{
+  box-sizing: border-box;
+  height: 5%;
+  color:white;
+  width: 100%;
+  padding-left: 10px;
+  padding-top:4px;
+  font-family: 'Poppins';
+  background-color: #0F0074;
+}
+.res_table{
+  border-collapse: collapse;
+}
+.res_table td,.res_table th{
+  padding: 10px;
+  border: 1px solid black;
+}
+#input{
+  display: inline-block;
+}
+#train{
+  display: inline-block;
+}
+#test{
+  display: inline-block;
+}
+.loading{
+  width:25px;
+  height:25px;
+  float:right;
+  padding-left:10px;
+}
